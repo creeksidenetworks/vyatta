@@ -50,7 +50,7 @@ is_key_value = re.compile(
         ^                       # beginning of a line
         ([\w\-]+)               # key
         \ +                     # any space
-        ['"]?(.*?)['"]?$     # value may be inside of single or double quote
+        ['"]?(.*?)['"]?$        # value may be inside of single or double quote
         ''', re.UNICODE | re.VERBOSE
 )
 
