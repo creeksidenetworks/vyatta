@@ -1,0 +1,25 @@
+interfaces {
+    ethernet eth0 {
+        address dhcp
+        description 'Internet is good'
+        duplex auto
+        speed auto
+    }
+    loopback lo {
+        address 10.255.248.254/32
+    }
+}
+system {
+    name-server 1.1.1.1
+    name-server 8.8.8.8
+    name-server 9.9.9.9
+    offload {
+        hwnat disable
+        ipsec enable
+    }
+}
+
+
+/* Warning: Do not remove the following line. */
+/* === vyatta-config-version: "config-management@1:conntrack@1:cron@1:dhcp-relay@1:dhcp-server@4:firewall@5:ipsec@5:nat@3:qos@1:quagga@2:suspend@1:system@5:ubnt-l2tp@1:ubnt-pptp@1:ubnt-udapi-server@1:ubnt-unms@2:ubnt-util@1:vrrp@1:vyatta-netflow@1:webgui@1:webproxy@1:zone-policy@1" === */
+/* Release version: v2.0.9-hotfix.4.5521907.220630.0658 */
